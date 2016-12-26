@@ -17,7 +17,7 @@ $result = mysqli_query ($conn, $sql);
 if (mysqli_num_rows($result) > 0 ) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "<h1>" . $row["message"]. "</h1>";
+        echo "<h1 class='item' id='" . $row["id"] . "'  data-likes='" . $row["likes"] . "'><div class='message'>" . $row["message"]. "</div><div class='likes'>" . $row["likes"] . "</div></h1>";
     }
 } else {
     echo "<h1>Aucun message</h1>";

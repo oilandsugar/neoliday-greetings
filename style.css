@@ -18,8 +18,8 @@ body {
 }
 
 h1 {
-	text-align:center;
-	font-size:3em;
+	text-align:left;
+	font-size:2em;
 	color:rgb(88, 231, 166);
 	letter-spacing:4px;
 	-webkit-transition: 0.3s ease-in-out;
@@ -27,10 +27,22 @@ h1 {
 	position:relative;
 	display:block;
 	padding:0.6em 0 0.7em 0;
-	border-bottom:6px solid;
+	border-bottom:4px solid;
 	margin:0;
 	text-transform:uppercase;
 	border-color:rgb(88, 231, 166)!important;
+	overflow:hidden;
+	cursor:pointer;
+}
+
+h1 .message {
+	width:calc(100% - 60px);
+	float:left;
+}
+
+h1 .likes {
+	float:right;
+	color:#dddfe2;
 }
 
 
@@ -48,7 +60,7 @@ h1 {
 }
 
 h1:first-child {
-	border-top:6px solid;
+	border-top:4px solid;
 }
 
 h1:hover {
@@ -68,17 +80,17 @@ a:hover {
 input, textarea {
 	width:100%;
 	padding:0.6em 0 0.7em 0;
-	font-size:3em;
+	font-size:2em;
 	margin:0;
 	border:0;
 	outline:0;
-	border-bottom:6px solid;
+	border-bottom:4px solid;
 	color:rgb(88, 231, 166);
 	letter-spacing:4px;
 	text-transform:uppercase;
 	background:transparent;
 	font-family: 'Dosis', sans-serif;
-	text-align:center;
+	text-align:left;
 	font-weight:bold;
 	border-radius:0;
 	-webkit-border-radius:0;
@@ -95,11 +107,11 @@ textarea {
 }
 
 form {
-	text-align:center;
+	text-align:left;
 }
 
 #output {
-	text-align: center;
+	text-align: left;
 	color: rgb(88, 231, 166);
 	font-size: 2em;
 	padding: 1em 0;

@@ -1,6 +1,5 @@
-$(document).ready(function(){
-    function showMessages(){
-        $.ajax({
+function showMessages(){
+    $.ajax({
             type:"POST",
             url:"fetch.php",
             data:{action:"message"},
@@ -9,7 +8,13 @@ $(document).ready(function(){
             }
         });
     }
-    showMessages();
+showMessages();
+
+$(document).ready(function(){
+	
+	$(".item").click(function() {
+		console.log('test');
+	});
 	
 	$('#send-to-field').on('click', function(e){
 		e.preventDefault();
@@ -22,4 +27,5 @@ $(document).ready(function(){
 		}, 1000);
 		return false;
 	});
+	
 });

@@ -26,9 +26,9 @@ $(document).ready(function() {
 		e.preventDefault();
 		var data = $('#send_new_fetes').serialize();
 		var value = $('#message').val();
-		if (value === '') {
+		if (value === '' || value === ' ') {
 			$('#output').html("Veuillez ajouter un message avant d'envoyer");
-		} else if (value == 'joyeux noël' || value == 'joyeux noel' || value == 'joyeuses fêtes' || value == 'joyeuses fetes' || value == 'bonne année' || value == 'Bonne année' || value == 'heureuse année') {
+		} else if (value == 'joyeux noël' || value == 'joyeux noel' || value == 'joyeuses fêtes' || value == 'joyeuses fetes' || value == 'bonne année' || value == 'Bonne année' || value == 'heureuse année' || value == 'merry christmas' || value == 'happy new year') {
 			$('#output').html("Veuillez faire preuve d'un peu plus d'originalité");
 		} else {
 			// AJAX Code To Submit Form.
@@ -45,4 +45,5 @@ $(document).ready(function() {
 		}
 		return false;
 	});
+
 });
